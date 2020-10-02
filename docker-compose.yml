@@ -1,0 +1,6 @@
+version: '3'
+services:
+  # Telegram bot rest
+  pdf-compose-service:
+    build:
+      context: server
