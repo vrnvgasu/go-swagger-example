@@ -25,6 +25,9 @@ func ComposeFromFiles(files []io.ReadCloser) (io.ReadCloser, error) {
 	defer os.RemoveAll(dir)
 
 	for i, f := range files {
+		if f == nil {
+			continue
+		}
 
 		tmpfn := filepath.Join(dir, fmt.Sprintf("tmpfile_%d", i))
 		data, _ := ioutil.ReadAll(f)
