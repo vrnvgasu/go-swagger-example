@@ -1,5 +1,5 @@
 #---Build stage---
-FROM golang:1.13 AS builder
+FROM golang:1.21 AS builder
 COPY . /go/src/
 WORKDIR /go/src/cmd/service-pdf-compose-server
 
